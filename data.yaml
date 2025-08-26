@@ -1,0 +1,17 @@
+# data.yaml
+path: datasets  # 数据集根目录
+train: images/train  # 训练集相对路径
+val: images/val  # 验证集相对路径
+
+# 类别列表
+names:
+  0: none
+  1: paper cutter
+  2: pliers
+  3: screwdriver
+  4: sharp pliers
+  5: charger
+  6: hamster
+  7: speaker
+  8: wrench
+  # 添加更多工具类别...
