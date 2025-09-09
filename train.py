@@ -11,7 +11,7 @@ def main():
         epochs=100,
         batch=16,
         imgsz=640,
-        device='0'  # 或 '0' 如果有GPU
+        device='0'  # '0' 如果有GPU
     )
 
 if __name__ == '__main__':
