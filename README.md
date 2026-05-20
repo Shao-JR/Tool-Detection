@@ -81,28 +81,29 @@ python demo.py
 3.  **实时检测**：训练完成后，使用 `demo.py` 加载生成的权重文件（如 `best.pt`）进行实时摄像头检测。
 
 ### 流程图
-    ```mermaid
-    graph TD
-        subgraph 阶段一：数据采集
-            A[capture.py] --> B[打开摄像头]
-            B --> C{按下按键}
-            C -- 拍摄 --> D[保存图片到 datasets/images]
-            C -- 退出 --> E[结束采集]
-        end
+```mermaid
+graph TD
+    subgraph A["阶段一：数据采集"]
+        A1[capture.py] --> A2[打开摄像头]
+        A2 --> A3{按下按键}
+        A3 -- 拍摄 --> A4[保存图片到 datasets/images]
+        A3 -- 退出 --> A5[结束采集]
+    end
 
-        subgraph 阶段二：模型训练
-            F[train.py] --> G[读取 datasets 数据集]
-            G --> H[加载预训练模型]
-            H --> I[开始训练]
-            I --> J[生成 runs/detect/trainX/weights/best.pt]
-        end
+    subgraph B["阶段二：模型训练"]
+        F[train.py] --> G[读取 datasets 数据集]
+        G --> H[加载预训练模型]
+        H --> I[开始训练]
+        I --> J[生成 runs/detect/trainX/weights/best.pt]
+    end
 
-        subgraph 阶段三：实时推理
-            K[demo.py] --> L[加载 best.pt 模型]
-            L --> M[打开摄像头]
-            M --> N[实时目标检测]
-            N --> O[显示结果窗口]
-        end
+    subgraph C["阶段三：实时推理"]
+        K[demo.py] --> L[加载 best.pt 模型]
+        L --> M[打开摄像头]
+        M --> N[实时目标检测]
+        N --> O[显示结果窗口]
+    end
 
-        阶段一 --> 阶段二 --> 阶段三
-    ```
+    A1 --> F
+    I --> K
+```
