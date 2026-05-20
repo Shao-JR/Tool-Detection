@@ -1,5 +1,14 @@
 # 工具检测与目标识别系统 (Tool Detection System)
 
+<p>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python"></a>
+  <a href="https://docs.ultralytics.com/"><img src="https://img.shields.io/badge/YOLO-Ultralytics-orange.svg" alt="Ultralytics YOLO"></a>
+  <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-CUDA-green.svg" alt="PyTorch"></a>
+  <a href="https://opencv.org/"><img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-critical.svg" alt="OpenCV"></a>
+  <a href="https://www.qt.io/qt-for-python"><img src="https://img.shields.io/badge/GUI-PyQt5-purple.svg" alt="PyQt5"></a>
+  <a href="https://numpy.org/"><img src="https://img.shields.io/badge/NumPy-Scientific%20Computing-yellow.svg" alt="NumPy"></a>
+</p>
+
 ## 📖 项目简介
 
 本项目是一个基于 **Ultralytics YOLOv11** 的完整计算机视觉解决方案，旨在实现特定工具或物体的实时检测与识别。项目涵盖了从 **数据采集**、**环境配置** 到 **模型训练** 和 **实时推理** 的全流程。
